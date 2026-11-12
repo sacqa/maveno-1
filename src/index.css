@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --brand-primary: #113225;
+    --brand-secondary: #3f594d;
+    --brand-accent: #c59b5f; /* antique brass accent */
+    --brand-accent-hover: #a88047;
+    --brand-bg: #fdfcf9;
+    --brand-surface: #ffffff;
+    --brand-border: #cfe0d6;
+    --brand-text: #171717;
+    --brand-muted: #5f6f66;
+    --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Poppins', monospace;
+
+    /* Emerald Botanical & Ivory Palette (Option 2 — Permanent) */
+    --hp-primary: #113225;
+    --hp-primary-hover: #0B2219;
+    --hp-band-bg: #F1F6F3;
+    --hp-card-tint: #E5EFE9;
+    --hp-border: #CFE0D6;
+    --hp-hero-from: #DCECE2;
+    --hp-hero-via: #EAF4EE;
+    --hp-hero-to: #D2E6DA;
+    --hp-story-card: #D0E6D9;
+  }
+
+  *,
+  *::before,
+  *::after {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  body {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--brand-bg);
+    color: var(--brand-text);
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-heading);
+  }
+
+  .font-mono-numbers {
+    font-family: var(--font-sans);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3d4ca;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #96b0a1;
+}
